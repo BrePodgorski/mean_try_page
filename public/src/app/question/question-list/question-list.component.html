@@ -1,0 +1,17 @@
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Question</th>
+    <th>Asked At</th>
+    <th>Delete</th>
+  </tr>
+  <tr class="question" *ngFor="let question of questions">
+    <!-- this is how you make a for loop in an html -->
+    <th>{{question._user.name}}</th><th><a [routerLink]="['/questions/show', question._id]">{{question.question}}</a></th> <th>{{question.createdAt | date: 'mediumDate'}}</th>
+    <th><button (click)="deleteQuestionInComponent(question._id)">Delete</button></th>
+    <!-- creating a new function for deleted -->
+  </tr>
+</table>
+
+<!-- <a [routerLink]="['/show', question._id]"></a> -->

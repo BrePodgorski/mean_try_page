@@ -1,0 +1,34 @@
+  <div class = 'question' *ngIf="question">
+    <h3>Question: {{question.question}}</h3>
+    <p>Click the vote button to choose one</p>
+    <table>
+      <thead>
+        <th>Option</th>
+        <th>Current Count of Votes</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{question.optionOneText}}</td>
+          <td>{{question.optionOneNumber}}</td>
+          <td><button (click)="voteOptionInComponent(optionOneNumber)">Vote</button></td>
+        </tr>
+        <tr>
+          <td>{{question.optionTwoText}}</td>
+          <td>{{question.optionTwoNumber}}</td>
+          <td><button (click)="voteOptionInComponent(optionTwoNumber)">Vote</button></td>
+        </tr>
+        <tr>
+          <td>{{question.optionThreeText}}</td>
+          <td>{{question.optionThreeNumber}}</td>
+          <td><button (click)="voteOptionInComponent(optionThreeNumber)">Vote</button></td>
+        </tr>
+        <tr>
+          <td>{{question.optionThreeText}}</td>
+          <td>{{question.optionFourNumber}}</td>
+          <td><button (click)="voteOptionInComponent(optionFourNumber)">Vote</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

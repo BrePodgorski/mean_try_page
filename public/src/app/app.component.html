@@ -1,0 +1,10 @@
+<h1>Welcome to questions board</h1>
+
+<h3 *ngIf="user">Hello {{user.name}}</h3>
+
+<a [routerLink]="['/questions/add']">New Question</a>
+
+<!-- abover first -->
+<a [routerLink]="['/questions/list']">List</a>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+<h3>Create a New Question and Options Here</h3>
+<!-- add the functionality for the form to pass data -->
+<form (submit)="addQuestionInNewComponent(formData)" #formData="ngForm">
+<!-- when we add this form its going to add a new friend into out component -->
+  <label>Question: <input type="text" name="question" ngModel></label><br>
+  <label>Option 1: <input type="text" name="optionOneText" ngModel></label><br>
+  <label>Option 2: <input type="text" name="optionTwoText" ngModel></label><br>
+  <label>Option 3: <input type="text" name="optionThreeText" ngModel></label><br>
+  <label>Option 4: <input type="text" name="optionFourText" ngModel></label><br>
+  <input type="submit" value="Create Poll">
+</form>
